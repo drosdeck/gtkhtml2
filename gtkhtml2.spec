@@ -28,8 +28,8 @@ BuildRequires: fontconfig
 BuildRequires: gail-devel >= %{gail_version}
 BuildRequires: gnome-vfs2-devel >= %{gnome_vfs2_version}
 #BuildRequires: gtk2-devel >= %{gtk2_version}
-BuildRequires: libgail-devel 
-BuildRequires: libgtk+2.0-devel
+#BuildRequires: libgail-devel 
+#BuildRequires: libgtk+2.0-devel
 BuildRequires: libgtk-modules2.0
 BuildRequires: libtool
 BuildRequires: libxml2-devel >= %{libxml2_version}
@@ -57,7 +57,7 @@ Libraries and include files that can be used to develop Gtkhtml2 applications.
 %build
 # XXX remove this when bug #83188 is resolved
 %ifarch x86_64
-%define optflags -g
+%define optflags -g -lm
 %endif
 %configure
 export tagname=CC
@@ -70,7 +70,7 @@ export tagname=CC
 
 # remove unpackaged files
 rm $RPM_BUILD_ROOT%{_libdir}/libgtkhtml-2.la
-rm $RPM_BUILD_ROOT%{_libdir}/*.a
+#rm $RPM_BUILD_ROOT%{_libdir}/*.a
 
 %clean
 rm -rf $RPM_BUILD_ROOT
