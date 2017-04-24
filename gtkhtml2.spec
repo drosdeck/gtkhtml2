@@ -27,7 +27,8 @@ Requires: libxml2 >= %{libxml2_version}
 BuildRequires: fontconfig
 BuildRequires: gail-devel >= %{gail_version}
 BuildRequires: gnome-vfs2-devel >= %{gnome_vfs2_version}
-BuildRequires: gtk2-devel >= %{gtk2_version}
+#BuildRequires: gtk2-devel >= %{gtk2_version}
+BuildRequires: libgail-devel 
 BuildRequires: libtool
 BuildRequires: libxml2-devel >= %{libxml2_version}
 BuildRequires: pango-devel >= %{pango_version}
